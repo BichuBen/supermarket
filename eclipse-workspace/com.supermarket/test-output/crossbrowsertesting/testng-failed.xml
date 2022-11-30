@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [crossbrowsertesting]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.supermarket.listeners.ExtentReporter"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="browser chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.supermarket.tests.AdminUserstest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="Setup"/>
+          <include name="verifyEditUser"/>
+          <include name="Set_up"/>
+        </methods>
+      </class> <!-- com.supermarket.tests.AdminUserstest -->
+    </classes>
+  </test> <!-- browser chrome(failed) -->
+  <test thread-count="4" parallel="tests" name="browser edge(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="com.supermarket.tests.AdminUserstest">
+        <methods>
+          <include name="Setup"/>
+          <include name="tearDown"/>
+          <include name="verifyEditUser"/>
+          <include name="Set_up"/>
+        </methods>
+      </class> <!-- com.supermarket.tests.AdminUserstest -->
+    </classes>
+  </test> <!-- browser edge(failed) -->
+</suite> <!-- Failed suite [crossbrowsertesting] -->
